@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "newvehicle.h"
+#include <QFont>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -14,20 +15,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_verticalScrollBar_sliderMoved(int position)
-{
-
-}
-
-void MainWindow::on_pushButton_pressed()
+void MainWindow::on_newvehicle_button_pressed()
 {
     newvehicle ventananewvehicle;
     ventananewvehicle.setModal(true);
     ventananewvehicle.exec();
 }
 
-void MainWindow::on_pushButton_2_pressed()
+void MainWindow::on_exit_button_pressed()
 {
     exit(0);
 }

@@ -16,11 +16,11 @@ public:
     ~newvehicle();
 
 private slots:
-    void on_pushButton_2_pressed();
+    void on_CANCEL_pressed();
 
-    void on_pushButton_pressed();
+    void on_CREATE_pressed();
 
-    void on_label_9_linkActivated(const QString &link);
+    void on_matricula_button_pressed();
 
 private:
     Ui::newvehicle *ui;

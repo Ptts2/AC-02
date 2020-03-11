@@ -16,11 +16,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_verticalScrollBar_sliderMoved(int position);
 
-    void on_pushButton_pressed();
+    void on_newvehicle_button_pressed();
 
-    void on_pushButton_2_pressed();
+    void on_exit_button_pressed();
 
 private:
     Ui::MainWindow *ui;

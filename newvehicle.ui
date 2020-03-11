@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Create new vehicle</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="CREATE">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -26,7 +26,7 @@
     <string>Create</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="CANCEL">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -39,12 +39,12 @@
     <string>Cancel</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="TITLE">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>100</x>
      <y>0</y>
-     <width>441</width>
+     <width>491</width>
      <height>101</height>
     </rect>
    </property>
@@ -59,7 +59,7 @@
     <string>CREATE NEW VEHICLE</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="name_input">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -69,7 +69,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="name_label">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -82,7 +82,7 @@
     <string>Name</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="wheelnum_label">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -95,7 +95,7 @@
     <string>Wheel num</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="wheelnum_select">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -135,7 +135,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="color_label">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -148,7 +148,7 @@
     <string>Color</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="color_select">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -164,36 +164,36 @@
    </item>
    <item>
     <property name="text">
-     <string>Blanco</string>
+     <string>BLANCO</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Negro</string>
+     <string>NEGRO</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Rojo</string>
+     <string>ROJO</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Azul</string>
+     <string>AZUL</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Amarillo</string>
+     <string>AMARILLO</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Verde</string>
+     <string>VERDE</string>
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="motor_label">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -206,12 +206,12 @@
     <string>Motor</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="motor_button_yes">
    <property name="geometry">
     <rect>
      <x>90</x>
      <y>190</y>
-     <width>112</width>
+     <width>51</width>
      <height>23</height>
     </rect>
    </property>
@@ -219,15 +219,15 @@
     <string>Yes</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup_2</string>
+    <string notr="true">motor_yesno_buttons</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QRadioButton" name="motor_button_no">
    <property name="geometry">
     <rect>
      <x>160</x>
      <y>190</y>
-     <width>112</width>
+     <width>41</width>
      <height>23</height>
     </rect>
    </property>
@@ -235,10 +235,10 @@
     <string>No</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup_2</string>
+    <string notr="true">motor_yesno_buttons</string>
    </attribute>
   </widget>
-  <widget class="QLabel" name="potencia">
+  <widget class="QLabel" name="pow_label">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -251,7 +251,7 @@
     <string>Potencia</string>
    </property>
   </widget>
-  <widget class="QSlider" name="potenciabar">
+  <widget class="QSlider" name="pow_slider">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -270,7 +270,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="potencianum">
+  <widget class="QLabel" name="pow_num_slider_label">
    <property name="geometry">
     <rect>
      <x>490</x>
@@ -283,7 +283,7 @@
     <string>80</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="fuel_label">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -296,7 +296,7 @@
     <string>Combustible</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QCheckBox" name="fuel_check">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -309,7 +309,7 @@
     <string>Yes</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="fueltype_label">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -322,7 +322,7 @@
     <string>Tipo de combustible</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="Combocombustible">
+  <widget class="QComboBox" name="fuel_select">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -338,36 +338,36 @@
    </item>
    <item>
     <property name="text">
-     <string>Electrico</string>
+     <string>ELECTRICO</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Gasolina</string>
+     <string>GASOLINA</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Diesel</string>
+     <string>DIESEL</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Hibrido</string>
+     <string>HIBRIDO</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>Queroseno</string>
+     <string>QUEROSENO</string>
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="label_10">
+  <widget class="QLabel" name="wings_label">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>300</y>
-     <width>91</width>
+     <width>31</width>
      <height>21</height>
     </rect>
    </property>
@@ -375,12 +375,12 @@
     <string>Alas</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_11">
+  <widget class="QLabel" name="reactors_label">
    <property name="geometry">
     <rect>
      <x>220</x>
      <y>300</y>
-     <width>91</width>
+     <width>71</width>
      <height>21</height>
     </rect>
    </property>
@@ -388,7 +388,7 @@
     <string>Reactores</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_3">
+  <widget class="QRadioButton" name="wings_button_yes">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -401,10 +401,10 @@
     <string>Yes</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup</string>
+    <string notr="true">wings_yesnobuttons</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="radioButton_4">
+  <widget class="QRadioButton" name="wings_button_no">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -417,10 +417,10 @@
     <string>No</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup</string>
+    <string notr="true">wings_yesnobuttons</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="radioButton_5">
+  <widget class="QRadioButton" name="reactors_button_yes">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -433,10 +433,10 @@
     <string>Yes</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup_3</string>
+    <string notr="true">reactors_yesno_buttons</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="radioButton_6">
+  <widget class="QRadioButton" name="reactors_button_no">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -449,23 +449,23 @@
     <string>No</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup_3</string>
+    <string notr="true">reactors_yesno_buttons</string>
    </attribute>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="tren_label">
    <property name="geometry">
     <rect>
      <x>440</x>
      <y>300</y>
-     <width>91</width>
+     <width>81</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Tren de ater.</string>
+    <string>Tren de aterr.</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_7">
+  <widget class="QRadioButton" name="tren_button_yes">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -478,10 +478,10 @@
     <string>Yes</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup_4</string>
+    <string notr="true">tren_yesno_buttons</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="radioButton_8">
+  <widget class="QRadioButton" name="tren_button_no">
    <property name="geometry">
     <rect>
      <x>590</x>
@@ -494,10 +494,10 @@
     <string>No</string>
    </property>
    <attribute name="buttonGroup">
-    <string notr="true">buttonGroup_4</string>
+    <string notr="true">tren_yesno_buttons</string>
    </attribute>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="locom_label">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -510,7 +510,7 @@
     <string>Locomotora</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_9">
+  <widget class="QRadioButton" name="locom_button_yes">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -523,7 +523,7 @@
     <string>Yes</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_10">
+  <widget class="QRadioButton" name="locom_button_no">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -536,12 +536,12 @@
     <string>No</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="wagon_label">
    <property name="geometry">
     <rect>
      <x>280</x>
      <y>360</y>
-     <width>91</width>
+     <width>61</width>
      <height>21</height>
     </rect>
    </property>
@@ -549,7 +549,7 @@
     <string>Vagones</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_2">
+  <widget class="QCheckBox" name="wagon_check">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -562,7 +562,7 @@
     <string>Yes</string>
    </property>
   </widget>
-  <widget class="QLabel" name="numvagones">
+  <widget class="QLabel" name="wagon_num_label">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -575,7 +575,7 @@
     <string>Num</string>
    </property>
   </widget>
-  <widget class="QLabel" name="numvagonesnum">
+  <widget class="QLabel" name="wagon_num_slider_label">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -588,7 +588,7 @@
     <string>5</string>
    </property>
   </widget>
-  <widget class="QSlider" name="numvagonesbar">
+  <widget class="QSlider" name="wagon_num_slider">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -607,7 +607,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_13">
+  <widget class="QLabel" name="extra_label">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -620,7 +620,7 @@
     <string>Extra</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_3">
+  <widget class="QComboBox" name="extra_select">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -645,7 +645,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="matricula_button">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -658,7 +658,7 @@
     <string>GENERAR MATRICULA</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_14">
+  <widget class="QLabel" name="matricula_label">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -680,9 +680,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>potenciabar</sender>
+   <sender>pow_slider</sender>
    <signal>sliderMoved(int)</signal>
-   <receiver>potencianum</receiver>
+   <receiver>pow_num_slider_label</receiver>
    <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -696,9 +696,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton_2</sender>
+   <sender>motor_button_no</sender>
    <signal>clicked(bool)</signal>
-   <receiver>potencia</receiver>
+   <receiver>pow_label</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -712,9 +712,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton_2</sender>
+   <sender>motor_button_no</sender>
    <signal>clicked(bool)</signal>
-   <receiver>potenciabar</receiver>
+   <receiver>pow_slider</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -728,9 +728,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton_2</sender>
+   <sender>motor_button_no</sender>
    <signal>clicked(bool)</signal>
-   <receiver>potencianum</receiver>
+   <receiver>pow_num_slider_label</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -744,9 +744,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>motor_button_yes</sender>
    <signal>clicked(bool)</signal>
-   <receiver>potencia</receiver>
+   <receiver>pow_label</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -760,9 +760,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>motor_button_yes</sender>
    <signal>clicked(bool)</signal>
-   <receiver>potenciabar</receiver>
+   <receiver>pow_slider</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -776,9 +776,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>motor_button_yes</sender>
    <signal>clicked(bool)</signal>
-   <receiver>potencianum</receiver>
+   <receiver>pow_num_slider_label</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -792,41 +792,25 @@
    </hints>
   </connection>
   <connection>
-   <sender>checkBox</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>label_9</receiver>
-   <slot>setVisible(bool)</slot>
+   <sender>wagon_num_slider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>wagon_num_slider_label</receiver>
+   <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>180</x>
-     <y>260</y>
+     <x>574</x>
+     <y>364</y>
     </hint>
     <hint type="destinationlabel">
-     <x>307</x>
-     <y>256</y>
+     <x>643</x>
+     <y>363</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox</sender>
+   <sender>wagon_check</sender>
    <signal>clicked(bool)</signal>
-   <receiver>Combocombustible</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>171</x>
-     <y>246</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>433</x>
-     <y>251</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_2</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>numvagones</receiver>
+   <receiver>wagon_num_label</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -840,9 +824,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_2</sender>
+   <sender>wagon_check</sender>
    <signal>clicked(bool)</signal>
-   <receiver>numvagonesbar</receiver>
+   <receiver>wagon_num_slider</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -856,9 +840,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_2</sender>
+   <sender>wagon_check</sender>
    <signal>clicked(bool)</signal>
-   <receiver>numvagonesnum</receiver>
+   <receiver>wagon_num_slider_label</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -872,26 +856,42 @@
    </hints>
   </connection>
   <connection>
-   <sender>numvagonesbar</sender>
-   <signal>sliderMoved(int)</signal>
-   <receiver>numvagonesnum</receiver>
-   <slot>setNum(int)</slot>
+   <sender>fuel_check</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>fuel_select</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>574</x>
-     <y>364</y>
+     <x>171</x>
+     <y>246</y>
     </hint>
     <hint type="destinationlabel">
-     <x>643</x>
-     <y>363</y>
+     <x>433</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fuel_check</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>fueltype_label</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>256</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
-  <buttongroup name="buttonGroup_2"/>
-  <buttongroup name="buttonGroup_3"/>
-  <buttongroup name="buttonGroup_4"/>
+  <buttongroup name="tren_yesno_buttons"/>
+  <buttongroup name="motor_yesno_buttons"/>
+  <buttongroup name="wings_yesnobuttons"/>
+  <buttongroup name="reactors_yesno_buttons"/>
  </buttongroups>
 </ui>

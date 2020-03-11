@@ -8,6 +8,12 @@ newvehicle::newvehicle(QWidget *parent) :
     ui->setupUi(this);
     ui->label_9->hide();
     ui->Combocombustible->hide();
+    ui->potencia->hide();
+    ui->potenciabar->hide();
+    ui->potencianum->hide();
+    ui->numvagones->hide();
+    ui->numvagonesbar->hide();
+    ui->numvagonesnum->hide();
 }
 
 newvehicle::~newvehicle()

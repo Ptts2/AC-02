@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <vector>
+#include <vehiculo.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +16,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void addVehicle(Vehiculo vehiculo);
 
 private slots:
 
@@ -23,5 +26,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int count;
 };
 #endif // MAINWINDOW_H

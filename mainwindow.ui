@@ -32,7 +32,7 @@
     <property name="widgetResizable">
      <bool>true</bool>
     </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
+    <widget class="QWidget" name="panelVehiculos">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -41,6 +41,17 @@
        <height>579</height>
       </rect>
      </property>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>0</y>
+        <width>611</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="newvehicle_button">

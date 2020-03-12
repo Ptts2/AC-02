@@ -24,6 +24,7 @@ private slots:
 
 private:
     Ui::newvehicle *ui;
+    QWidget *parent;
 };
 
 #endif // NEWVEHICLE_H

@@ -9,8 +9,10 @@ class Vehiculo
 {
 public:
     Vehiculo();
-    Vehiculo(string nombre, int wheelNum, bool motor, int motorPow, bool fuel, string fuelType, string color, bool wings, bool reactors, bool undercarriage, bool locomotive, bool wagons, int extra, string matricula);
+    Vehiculo(string nombre, int wheelNum, bool motor, int motorPow, bool fuel, string fuelType, string color, bool wings, bool reactors, bool undercarriage, bool locomotive, bool wagons, int wagonNum, int extra, string matricula);
     void setTipo();
+    string getTipo();
+    string to_string();
     ~Vehiculo();
 
 private:
@@ -27,7 +29,8 @@ private:
     bool undercarriage;
     bool locomotive;
     bool wagons;
-    int extra; //0 rueda 1 kit
+    int wagonNum;
+    int extra; //1 rueda 2 kit
     string matricula;
 
 };

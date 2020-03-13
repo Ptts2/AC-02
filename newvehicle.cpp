@@ -44,13 +44,30 @@ void newvehicle::on_CANCEL_pressed()
 void newvehicle::on_CREATE_pressed()
 {
 
-    /*
-    QMessageBox messageBox;
-    messageBox.critical(this,"Error","An error has occured !");
-    messageBox.setFixedSize(500,200);
-    */
-
     string wheelnumsWithOtherChars = ui->wheelnum_select->currentText().toUtf8().constData();
+    if(
+            (!ui->name_input->isModified()) ||
+            (wheelnumsWithOtherChars == "")  ||
+            ((string) ui->color_select->currentText().toUtf8().constData() == "") ||
+            (ui->motor_button_yes->isChecked()? false: !ui->motor_button_no->isChecked()) ||
+            (ui->wings_button_yes->isChecked()? false: !ui->wings_button_no->isChecked()) ||
+            (ui->reactors_button_yes->isChecked()? false: !ui->reactors_button_no->isChecked()) ||
+            (ui->tren_button_yes->isChecked()? false: !ui->tren_button_no->isChecked()) ||
+            (ui->locom_button_yes->isChecked()? false: !ui->locom_button_no->isChecked()) ||
+            ((string) ui->extra_select->currentText().toUtf8().constData() == "")||
+            (ui->fuel_check->isChecked()?((string) ui->fuel_select->currentText().toUtf8().constData() == ""):false)||
+            ((string)ui->matricula_label->text().toUtf8().constData() == "")
+        )
+    {
+
+    QMessageBox messageBox;
+    messageBox.critical(this,"Error","Introduce los datos correctamente!");
+    messageBox.setFixedSize(500,200);
+
+    }
+    else
+    {
+
     string wheelNums = regex_replace(wheelnumsWithOtherChars, std::regex(R"([\D])"), "");
     Vehiculo vehiculo( ui->name_input->text().toUtf8().constData(),
                        stoi(wheelNums),
@@ -68,10 +85,18 @@ void newvehicle::on_CREATE_pressed()
                        ui->extra_select->currentIndex(),
                        ui->matricula_label->text().toUtf8().constData()
                        );
+    if(vehiculo.getTipo() == "ERROR")
+    {
+        QMessageBox messageBox;
+        messageBox.critical(this,"Error","Tipo de vehiculo no reconocido.");
+        messageBox.setFixedSize(500,200);
+    }else
+    {
     MainWindow *padre =(MainWindow*)parent;
     padre->MainWindow::addVehicle(vehiculo);
-
     this->close();
+    }
+    }
 }
 
 

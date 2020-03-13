@@ -42,7 +42,7 @@ void Vehiculo::setTipo()
     }
     else
     {
-        if(wheelNum == 2 && (motorPow >= 80 && motorPow <= 450) && fuel == true && fuelType != "QUEROSENO" && wings == false && reactors ==false && undercarriage==false && locomotive == false && wagons == false && extra == 1)
+        if(wheelNum == 2 && (motorPow >= 80 && motorPow <= 450) && fuel == true && fuelType != "QUEROSENO" && wings == false && reactors ==false && undercarriage==false && locomotive == false && wagons == false && extra == 2)
         {
             this->tipo = "MOTOCICLETA";
         }
@@ -50,7 +50,7 @@ void Vehiculo::setTipo()
         {
             this->tipo = "COCHE";
         }
-        else if(wheelNum == 4 && (motorPow > 250 && motorPow <= 450) && fuel == true && fuelType != "QUEROSENO" && wings == false && reactors ==false && undercarriage==false && locomotive == false && wagons == false && extra == 2)
+        else if(wheelNum == 4 && (motorPow > 250 && motorPow <= 450) && fuel == true && (fuelType == "ELECTRICO" || fuelType =="GASOLINA") && wings == false && reactors ==false && undercarriage==false && locomotive == false && wagons == false && extra == 2)
         {
             this->tipo = "COCHE DEPORTIVO";
         }

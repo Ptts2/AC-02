@@ -34,7 +34,7 @@ void MainWindow::on_exit_button_pressed()
 void MainWindow::addVehicle(Vehiculo vehiculo)
 {
 
-
+    coches.push_back(vehiculo);
     QLabel *label = new QLabel(QString::fromStdString(vehiculo.to_string()));
     label->setFixedSize(1000,50);
     label->setAutoFillBackground(true);

@@ -29,5 +29,6 @@ private:
     Ui::MainWindow *ui;
     QVBoxLayout *vlayout;
     int count;
+    vector<Vehiculo> coches;
 };
 #endif // MAINWINDOW_H

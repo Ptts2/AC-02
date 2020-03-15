@@ -9,8 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-
+    this->count = 0;
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -33,7 +34,7 @@ void MainWindow::on_exit_button_pressed()
 void MainWindow::addVehicle(Vehiculo vehiculo)
 {
 
-    ui->scrollArea->setWidget(ui->verticalLayout->widget());
+
     QLabel *label = new QLabel(QString::fromStdString(vehiculo.to_string()));
     label->setFixedSize(1000,50);
     label->setAutoFillBackground(true);
@@ -41,6 +42,10 @@ void MainWindow::addVehicle(Vehiculo vehiculo)
     pal.setColor(QPalette::Window, QColor(Qt::yellow));
     label->setPalette(pal);
     ui->verticalLayout->addWidget(label);
+    count++;
+    ui->numvehiculos->setText(QString::fromStdString((to_string(count))));
+
+
 
 
 }

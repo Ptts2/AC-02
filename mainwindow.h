@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include <vector>
-#include <vehiculo.h>
+#include "vehiculo.h"
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +27,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QVBoxLayout *vlayout;
     int count;
 };
 #endif // MAINWINDOW_H

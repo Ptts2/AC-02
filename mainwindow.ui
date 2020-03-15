@@ -80,6 +80,32 @@
      <string>EXIT</string>
     </property>
    </widget>
+   <widget class="QLabel" name="numvehiculos_text">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>320</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Numero de vehiculos: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="numvehiculos">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>340</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

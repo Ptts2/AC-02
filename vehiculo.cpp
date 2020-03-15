@@ -74,6 +74,18 @@ string Vehiculo::getTipo()
 
 string Vehiculo::to_string()
 {
-    return (" NOMBRE: "+this->nombre+" TIPO: "+this->tipo+ " MATRICULA: "+this->matricula+ "\n COLOR: "+this->color+""+(this->fuelType != "NO_FUEL"? " COMBUSTIBLE: "+this->fuelType : "")+" REPUESTO: "+(this->extra == 1? "RUEDA DE RECAMBIO":"KIT DE REPARACION")+ (this->tipo == "TREN" ? std::to_string(wagonNum) : ""));
+    return ("  NOMBRE: "+this->nombre+
+            " \tTIPO: "+this->tipo+
+            " \tMATRICULA: "+this->matricula+
+            "\n  COLOR: "+this->color+""+(this->fuelType != "NO_FUEL"? " \tCOMBUSTIBLE: "+this->fuelType : " \tCOMBUSTIBLE: SIN COMBUSTIBLE")+
+            " \tREPUESTO: "+(this->extra == 1? "RUEDA DE RECAMBIO":"KIT DE REPARACION")+
+            (this->tipo == "TREN" ? " \tVAGONES: "+std::to_string(wagonNum) : " \tSIN VAGONES")+
+            "  \n  MOTOR: "+(this->motor? "YES WITH POWER OF "+std::to_string(this->motorPow):"NO")+
+            " \tNº Ruedas: "+std::to_string(this->wheelNum)+
+            " \tALAS: "+(this->wings? "YES":"NO")+
+            " \tREACTORES: "+(this->reactors? "YES":"NO")+
+            " \tTREN DE ATERRIZAJE: "+(this->undercarriage? "YES":"NO")+
+            " \n  LOCOMOTORA: "+(this->locomotive? "YES":"NO")
+            );
 }
 

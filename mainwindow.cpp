@@ -11,7 +11,16 @@ MainWindow::MainWindow(QWidget *parent)
 {
     this->count = 0;
     ui->setupUi(this);
+    label = new QLabel();
+    label->setAutoFillBackground(true);
+    QPalette pal = label->palette();
+    pal.setColor(QPalette::Window, QColor(Qt::black));
+    pal.setColor(QPalette::WindowText, Qt::white);
 
+    label->setPalette(pal);
+    label->setStyleSheet("font-weight: bold; color: white");
+    ui->scrollArea->setWidgetResizable(true);
+    ui->scrollArea->setWidget(label);
 }
 
 MainWindow::~MainWindow()
@@ -35,13 +44,7 @@ void MainWindow::addVehicle(Vehiculo vehiculo)
 {
 
     coches.push_back(vehiculo);
-    QLabel *label = new QLabel(QString::fromStdString(vehiculo.to_string()));
-    label->setFixedSize(1000,50);
-    label->setAutoFillBackground(true);
-    QPalette pal = label->palette();
-    pal.setColor(QPalette::Window, QColor(Qt::yellow));
-    label->setPalette(pal);
-    ui->verticalLayout->addWidget(label);
+    label->setText(label->text()+"\n\n"+QString::fromStdString(vehiculo.to_string()));
     count++;
     ui->numvehiculos->setText(QString::fromStdString((to_string(count))));
 
